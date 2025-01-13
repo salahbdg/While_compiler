@@ -1,0 +1,12 @@
+function main : read X, Y %
+    Z := (cons X Y);
+    if Z then
+        W := (hd Z)
+    else
+        W := nil
+    fi;
+    foreach A in Z do
+        B := (hd A)
+    od
+%
+write W
