@@ -1,0 +1,11 @@
+java -cp .:antlr-runtime-4.13.2.jar MiniLangCompiler
+
+javac -cp antlr-4.13.2-complete.jar gen/*.java
+
+
+antlr4 -Dlanguage=Java -o gen while.g4
+java -jar /path/to/antlr-4.13.2-complete.jar MiniLang.g4 -o gen
+
+java -cp .:antlr-runtime-4.13.2.jar MiniLangCompiler program.mini
+
+grun antlr.Expr prog tests/test0.txt -gui &
