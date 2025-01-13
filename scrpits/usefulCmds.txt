@@ -1,10 +1,15 @@
 java -cp .:antlr-runtime-4.13.2.jar MiniLangCompiler
 
-javac -cp antlr-4.13.2-complete.jar gen/*.java
 
 
-antlr4 -Dlanguage=Java -o gen while.g4
+antlr4zwin -Dlanguage=Java -o ../java/antlr/ while.g4
+Or 
 java -jar /path/to/antlr-4.13.2-complete.jar MiniLang.g4 -o gen
+
+then compile
+javac -cp lib/antlr-4.13.2-complete.jar src/java/antlr/*.java
+------------
+
 
 java -cp .:antlr-runtime-4.13.2.jar MiniLangCompiler program.mini
 

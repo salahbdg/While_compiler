@@ -1,4 +1,3 @@
-package java.antlr;
 // Generated from while.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -121,11 +120,6 @@ public class whileParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitProgram(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitProgram(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ProgramContext program() throws RecognitionException {
@@ -182,11 +176,6 @@ public class whileParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitFunction(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitFunction(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FunctionContext function() throws RecognitionException {
@@ -238,11 +227,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitDefinition(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitDefinition(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -296,11 +280,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitInput(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitInput(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -368,11 +347,6 @@ public class whileParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitOutput(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitOutput(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final OutputContext output() throws RecognitionException {
@@ -430,11 +404,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitVars(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitVars(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -496,11 +465,6 @@ public class whileParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitExprs(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitExprs(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprsContext exprs() throws RecognitionException {
@@ -560,11 +524,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitCommands(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitCommands(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -635,11 +594,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitCommand(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitCommand(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -781,11 +735,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitExprBase(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitExprBase(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -940,11 +889,6 @@ public class whileParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitExpression(this);
 		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
@@ -1000,11 +944,6 @@ public class whileParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof whileListener ) ((whileListener)listener).exitLExpr(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof whileVisitor ) return ((whileVisitor<? extends T>)visitor).visitLExpr(this);
-			else return visitor.visitChildren(this);
 		}
 	}
 
