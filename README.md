@@ -21,7 +21,7 @@ write W
 
 Here is a workflow of the work
 
-![alt text](image.png)
+![alt text](images&diagrams/image.png)
 
 
 ### Example

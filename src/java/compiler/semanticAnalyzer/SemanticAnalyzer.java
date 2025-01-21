@@ -1,3 +1,7 @@
+package java.compiler.semanticAnalyzer;
+
+import java.compiler.SymbolTable.SymbolTable;
+
 import org.antlr.runtime.tree.CommonTree;
 
 public class SemanticAnalyzer {
@@ -15,7 +19,7 @@ public class SemanticAnalyzer {
                 handleWhile(node);
                 break;
             case "EXPR":
-                validateExpression(node);
+                evaluateExpression(node);
                 break;
             default:
                 for (Object child : node.getChildren()) {

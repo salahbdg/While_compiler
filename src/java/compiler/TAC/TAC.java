@@ -1,4 +1,4 @@
-package 
+package java.compiler.TAC;
 
 public class TAC {
   public enum OpCode {
