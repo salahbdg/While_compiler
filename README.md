@@ -1,5 +1,16 @@
 # CREATE A COMPILER FOR WHILE LANGUAGE
 
+To use our compiler, download WHILECOMPILER.jar and then run 
+
+java -jar WHILECOMPILER.jar yourwhilefile.while -x 
+
+If you want to debug make sur you create a directory named debugAST in the same working folder and run
+
+java -jar WHILECOMPILER.jar yourwhilefile.while -d 
+
+this will generate a .dot file that you can visualize the AST
+
+
 ## EXAMPLE CODE 
 ```code
 function main : read X, Y %
