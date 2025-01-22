@@ -1,44 +1,37 @@
-package C3A;
+package TAC;
 
 public class IfzGoto extends Instruction {
-  private Label elseLabel;
-  private Label endIfLabel;
-  private Variable v;
+  
+    private String elseLabel; 
+    private String endIfLabel; 
+    private String condition; 
 
-  /**
-   * If v == 0, do code until elseLabel then jump to endIfLabel
-   * Else, jump to elseLabel and do code until endIfLabel
-   * 
-   */
-  public IfzGoto(Label elseLabel, Label endIfLabel, Variable v) {
-    this.elseLabel = elseLabel;
-    this.endIfLabel = endIfLabel;
-    this.v = v;
-  }
+    public IfzGoto(String elseLabel, String endIfLabel, String condition) {
+        this.elseLabel = elseLabel;
+        this.endIfLabel = endIfLabel;
+        this.condition = condition;
+    }
 
-  public Label getElseLabel() {
-    return elseLabel;
-  }
-  public Label getEndIfLabel() {
-    return endIfLabel;
-  }
-  public Variable getV() {
-    return v;
-  }
+    public String getElseLabel() {
+        return elseLabel;
+    }
+
+    public String getEndIfLabel() {
+        return endIfLabel;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+  
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
 
   @Override
   public String toString() {
-    return "ifz " + v + " goto " + elseLabel;
+    return "ifz " + condition + " goto " + elseLabel;
   }
 
-  @Override
-  public String toPython(Indent indent) {
-    String s = indent + "if " + v.toPython() + ".toBool():\n";
-    indent.inc();
-    return s;
-  }
-
-  public void setV(Variable v) {
-    this.v = v;
-  }
 }
