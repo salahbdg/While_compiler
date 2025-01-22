@@ -1,0 +1,6 @@
+function emptyList:
+read
+%
+  Result := (list)
+%
+write Result
