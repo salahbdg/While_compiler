@@ -1,0 +1,7 @@
+function addToEmptyList :
+read
+%
+  EmptyList := (list);
+  NewList := (addToList a EmptyList)
+%
+write EmptyList, NewList
