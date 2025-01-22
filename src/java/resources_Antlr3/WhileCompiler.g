@@ -69,7 +69,7 @@ command:'nop' -> N_Nope
 vars :(Variable WS? ',' WS? vars) -> Variable vars | Variable -> Variable;
 
 exprs:expression (WS? ',' WS? expression)* -> expression+;
-//expression :e1=exprbase(' = 'e2=exprbase -> ^(N_Expression ^(EQUALS $e1 $e2))| -> ^(N_Expression $e1));
+//expression :e1=exprBase(' = 'e2=exprBase -> ^(N_Expression ^(EQUALS $e1 $e2))| -> ^(N_Expression $e1));
 expression : exprBase ('=?' exprBase)? -> ^(N_Expression exprBase exprBase?);
 exprBase:'nil' -> N_Nil
  	| Variable -> ^(N_Variable Variable)
