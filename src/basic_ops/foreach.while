@@ -1,0 +1,9 @@
+function reverseList:
+read List
+%
+  Result := nil;
+  foreach X in List do
+    Result := (cons X Result)
+  od
+%
+write Result
