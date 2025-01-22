@@ -1,32 +1,33 @@
 package TAC;
 
 public class N_Affectation implements NoeudAST {
-    private N_Variable variable;
-    private N_Expression expression;
+    private String variableLeft;
+    private String variableRight;
 
-    public N_Affectation(N_Variable variable, N_Expression expression) {
-        this.variable = variable;
-        this.expression = expression;
+
+    public N_Affectation(String L, String R) {
+        this.variableLeft = L;
+        this.variableRight = R;
     }
 
-    public N_Variable getVariable() {
-        return this.variable;
+    public String getVariableLeft() {
+        return this.variableLeft;
     }
 
-    public void setVariable(N_Variable variable) {
-        this.variable = variable;
+    public void setVariableLeft(String L) {
+        this.variableLeft = L;
     }
 
-    public N_Expression getExpression() {
-        return this.expression;
+    public String getVariableRight() {
+        return this.variableRight;
     }
 
-    public void setExpression(N_Expression expression) {
-        this.expression = expression;
+    public void setVariableRight(String R) {
+        this.variableRight = R;
     }
 
     @Override
     public String toString() {
-        return this.variable + " := " + this.expression;
+        return this.variableLeft + " := " + this.variableRight;
     }
 }
