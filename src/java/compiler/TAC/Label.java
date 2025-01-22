@@ -1,25 +1,20 @@
-package C3A;
+package TAC;
 
 public class Label extends Instruction {
-  private String label;
-  static int count = 0;
+  
+  private String name;
 
-  public Label(String label) {
-    this.label = label + "_" + count;
-    count++;
+  public Label(String name) {
+    this.name =  name;
   }
 
   public String getName() {
-    return label;
+    return this.name;
   }
 
   @Override
   public String toString() {
-    return label + ":";
+    return this.name + ":";
   }
 
-  @Override
-  public String toPython(Indent indent) {
-    return indent + "Label";
-  }
 }
