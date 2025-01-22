@@ -1,0 +1,8 @@
+function add:
+read X, Y
+%
+  for Y do
+    X := (cons nil X)
+  od
+%
+write X
