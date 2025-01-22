@@ -1,6 +1,6 @@
 package TAC;
 
-public class N_Affectation implements NoeudAST {
+public class N_Affectation implements Instruction {
     private String variableLeft;
     private String variableRight;
 
