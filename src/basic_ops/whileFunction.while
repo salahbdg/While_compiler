@@ -1,0 +1,8 @@
+function decrementToZero:
+read Counter
+%
+  while Counter do
+    Counter := (tl Counter) 
+  od
+%
+write Counter
