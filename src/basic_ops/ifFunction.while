@@ -1,0 +1,10 @@
+function testIf:
+read X
+%
+  if X then
+    Result := (false)  
+  else
+    Result := (true) 
+  fi
+%
+write Result
