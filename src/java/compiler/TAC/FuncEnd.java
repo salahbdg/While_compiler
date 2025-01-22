@@ -1,25 +1,13 @@
-package C3A;
+package TAC;
 
-public class FuncEnd extends Instruction {
-  private Symbol funcSymb; // not used but might be useful for debugging
+public class FuncEnd implements NoeudAST {
+  
+  public FuncEnd() {}
 
-  public FuncEnd(Symbol funcName) {
-    this.funcSymb = funcName;
-  }
-
-  public Symbol getFuncSymb() {
-    return funcSymb;
-  }
-
-  @Override
+ @Override
   public String toString() {
-    return "func end\n";
+     return "}";
   }
 
-  @Override
-  public String toPython(Indent indent) {
-    String s = indent + "return output";
-    indent.dec();
-    return s;
-  }
+
 }
