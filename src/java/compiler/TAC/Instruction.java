@@ -1,6 +1,6 @@
 package TAC;
 
-public abstract class NoeudAST {
+public abstract class Instruction {
     @Override
     public abstract String toString();
 }
