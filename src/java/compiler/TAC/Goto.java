@@ -1,9 +1,10 @@
 package TAC;
 
+//Represente un saut inconditionnel vers un label (un autre point)
 public class Goto extends Instruction{
   private Label label;
 
-  Goto(String l) {
+  Goto(Label l) {
     this.label = l;
   }
 
