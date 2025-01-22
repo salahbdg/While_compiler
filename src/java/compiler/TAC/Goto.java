@@ -1,24 +1,19 @@
-package C3A;
+package TAC;
 
 public class Goto extends Instruction{
-  private Label label;
+  private String label;
 
-  public Goto(Label label) {
-    this.label = label;
+  Goto(String l) {
+    this.label = l;
   }
 
-  public Label getLabel() {
-    return label;
+  public String getLabel() {
+    return this.label;
   }
 
   @Override
   public String toString() {
-    return "goto " + label.getName();
+        return "goto " + this.label;
   }
 
-  @Override
-  public String toPython(Indent indent) {
-    return indent+ "# Goto";
-  }
-  
 }
