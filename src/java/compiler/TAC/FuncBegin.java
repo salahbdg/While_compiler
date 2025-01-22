@@ -1,6 +1,6 @@
 package TAC;
 
-public class FuncBegin implements NoeudAST {
+public class FuncBegin implements Instruction {
     private String functionName;
 
     public FuncBegin(String functionName) {
@@ -8,15 +8,15 @@ public class FuncBegin implements NoeudAST {
     }
 
     public String getFunctionName() {
-        return functionName;
+        return this.functionName;
     }
 
-    public void setFunctionName(String functionName) {
-        this.functionName = functionName;
+    public void setFunctionName(String n) {
+        this.functionName = n;
     }
 
     @Override
     public String toString() {
-        return "function : " + functionName  + " {";
+        return "function : " + this.functionName  + " {";
     }
 }
