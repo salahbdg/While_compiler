@@ -17,6 +17,6 @@ public class FuncBegin implements NoeudAST {
 
     @Override
     public String toString() {
-        return "function : " + functionName ;
+        return "function : " + functionName  + " {";
     }
 }
