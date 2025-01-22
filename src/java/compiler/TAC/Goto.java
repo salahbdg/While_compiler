@@ -1,19 +1,19 @@
 package TAC;
 
 public class Goto extends Instruction{
-  private String label;
+  private Label label;
 
   Goto(String l) {
     this.label = l;
   }
 
-  public String getLabel() {
+  public Label getLabel() {
     return this.label;
   }
 
   @Override
   public String toString() {
-        return "goto " + this.label;
+        return "goto " + label.getName();
   }
 
 }
