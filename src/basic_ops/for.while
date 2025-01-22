@@ -1,0 +1,9 @@
+function repeatAdd:
+read Element, Times
+%
+  Result := nil;
+  for Times do
+    Result := (cons Element Result)
+  od
+%
+write Result
