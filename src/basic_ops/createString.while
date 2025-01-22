@@ -1,0 +1,6 @@
+function createString:
+read
+%
+  Result := (cons E (cons S (cons I (cons R (cons 2 nil)))))
+%
+write Result
