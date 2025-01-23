@@ -1,6 +1,6 @@
 package TAC;
 
-public class FuncEnd implements Instruction {
+public class FuncEnd extends Instruction {
   
   public FuncEnd() {}
 
