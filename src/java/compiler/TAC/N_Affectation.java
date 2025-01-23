@@ -1,6 +1,6 @@
 package TAC;
 
-public class N_Affectation implements Instruction {
+public class N_Affectation extends Instruction {
     private String variableLeft;
     private String variableRight;
 
