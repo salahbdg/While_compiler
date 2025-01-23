@@ -1,11 +1,11 @@
-package compiler;
+package runner;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
-
+import java.util.List;
 
 import org.antlr.stringtemplate.StringTemplate;
 import org.antlr.runtime.ANTLRFileStream;
@@ -17,7 +17,7 @@ import org.antlr.runtime.tree.Tree;
 
 import AST.ASTLexer;
 import AST.ASTParser;
-
+import C3A.C3aConverter;
 import C3A.Generator;
 import C3A.Instructions;
 
@@ -38,11 +38,6 @@ public class Main {
             System.exit(1);
         }
 
-        // if (args.length == 0) {
-        //     System.err.println("Wrong number of arguments, expected at least 1, got " +
-        //             args.length);
-        //     System.exit(1);
-        // }
 
         String filepath = args[0];
         File filepathAsFile = new File(filepath);
@@ -86,6 +81,26 @@ public class Main {
             checker.printErrors();
             System.exit(1);
         }
+
+
+        // Genrate 3-address code
+        C3aConverter converter = new C3aConverter();
+        List<String> threeAddressCode = converter.convert(ast);
+
+        System.out.println("\n### Warnings found during 3AC generation ###\n");
+        converter.getWarnnings();
+
+        System.out.println("\n### 3-Address Code ###\n");
+        System.out.println(threeAddressCode.size() + " lines of code");
+
+        for (String line : threeAddressCode) {
+            System.out.println(line);
+        }
+        for (String line : threeAddressCode) {
+            System.out.println(line);
+        }
+
+
 
 
         // // Generate 3-address code
