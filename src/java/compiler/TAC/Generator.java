@@ -123,7 +123,7 @@ public class Generator {
         Label endLabel = new Label("endif");
 
         // Condition
-        instructions.add(new IfzGoto(condition.getText(), elseLabel));
+        instructions.add(new IfzGoto(elseLabel, condition.getText()));
 
         // Bloc "then"
         processCommands(thenCommands);
@@ -151,7 +151,7 @@ public class Generator {
         instructions.add(startLabel);
 
         // Condition
-        instructions.add(new IfzGoto(condition.getText(), endLabel));
+        instructions.add(new IfzGoto(endLabel, condition.getText()));
 
         // Corps de la boucle
         processCommands(body);
@@ -179,7 +179,7 @@ public class Generator {
         instructions.add(startLabel);
 
         // Condition
-        instructions.add(new IfzGoto(iterator.getText(), endLabel));
+        instructions.add(new IfzGoto(endLabel, iterator.getText()));
 
         // Corps de la boucle
         processCommands(body);
@@ -207,7 +207,7 @@ public class Generator {
         instructions.add(startLabel);
 
         // Vérification de la collection vide
-        instructions.add(new IfzGoto(collection.getText(), endLabel));
+        instructions.add(new IfzGoto(endLabel, collection.getText()));
 
         // Assignation de l'itérateur
         instructions.add(new N_Affectation(iterator.getText(), "hd(" + collection.getText() + ")"));
