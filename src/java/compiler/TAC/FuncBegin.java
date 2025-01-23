@@ -1,6 +1,6 @@
 package TAC;
 
-public class FuncBegin implements Instruction {
+public class FuncBegin extends Instruction {
     private String functionName;
 
     public FuncBegin(String functionName) {
