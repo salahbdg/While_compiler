@@ -1,10 +1,10 @@
 package TAC;
 
-public class Nop extends Instruction{
+public class Nope extends Instruction{
 
   @Override
   public String toString() {
-    return "NOP";
+    return "N_Nope";
   }
 
   @Override
