@@ -93,7 +93,7 @@ public class Generator {
                 processOutput(commandNode);
                 break;
             case "N_Nope":
-                instructions.add(new Nop());
+                instructions.add(new Nope());
                 break;
             default:
                 throw new Exception("Commande inconnue : " + commandNode.getText());
