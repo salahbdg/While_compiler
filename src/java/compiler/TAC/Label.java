@@ -19,5 +19,3 @@ public class Label extends Instruction {
         return name + ":";
     }
 }
-
-
